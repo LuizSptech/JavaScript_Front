@@ -92,7 +92,31 @@ const produtos = [
     { nome: "SSD 1TB", preco: 520.00 }
 ];
 
-const desconto = produtos.map(produto => (produto.preco - (produto.preco * (10/100))) )
+//const desconto = produtos.map(produto => (produto.preco - (produto.preco * (10/100))) )
+const desconto = produtos.map(produto => {
+    return {
+        nome: produto.nome,
+        preco: produto.preco - (produto.preco * (10/100))
+    }
+})
 console.log(desconto)
 
 //Exercicio 5
+
+const pessoas = [
+    { nome: "Ana", idade: 20 },
+    { nome: "Carlos", idade: 25 },
+    { nome: "Mariana", idade: 19 },
+    { nome: "Pedro", idade: 32 },
+    { nome: "Julia", idade: 22 },
+    { nome: "Lucas", idade: 28 },
+    { nome: "Beatriz", idade: 21 },
+    { nome: "Gabriel", idade: 30 },
+    { nome: "Fernanda", idade: 24 },
+    { nome: "Rafael", idade: 35 }
+];
+let indice = 0
+const saida = pessoas.map((pessoa, indice)  => {
+    indice++
+    console.log(`${indice}. ${pessoa.nome} Tem ${pessoa.idade} anos`)
+})
