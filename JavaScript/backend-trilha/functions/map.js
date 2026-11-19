@@ -120,3 +120,18 @@ const saida = pessoas.map((pessoa, indice)  => {
     indice++
     console.log(`${indice}. ${pessoa.nome} Tem ${pessoa.idade} anos`)
 })
+
+
+
+const usuario = [
+  { id: 1, nome: "Ana" },
+  { id: 2, nome: "Carlos" },
+  { id: 3, nome: "Mariana" }
+];
+
+
+  <div>
+      {usuario.map((user) => (
+        <p key={user.id}>{user.nome}</p>
+      ))}
+    </div>
